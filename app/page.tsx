@@ -209,7 +209,7 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* ── HERO: terminal ── */}
+     {/* ── HERO: terminal ── */}
       <header ref={heroRef} className="max-w-5xl mx-auto px-6 md:px-10 pt-10 pb-24">
         <div className="rounded-md border border-[var(--line)] bg-[var(--panel)] shadow-[0_1px_0_rgba(0,0,0,0.02)] overflow-hidden">
           <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10">
@@ -249,15 +249,28 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-          <h1 className="font-display text-4xl md:text-6xl font-medium tracking-tight leading-[0.95]">
-            Ernesto Corzo
-          </h1>
+        {/* ── SECCIÓN MODIFICADA: Foto de perfil y Título ── */}
+        <div className="mt-12 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-5">
+            {/* Contenedor de la imagen */}
+            <div className="shrink-0">
+              <img 
+                src="perfil.png" 
+                alt="Fotografía de Ernesto Corzo" 
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover border border-[var(--line)] shadow-sm grayscale hover:grayscale-0 transition-all duration-500 ease-out"
+              />
+            </div>
+            
+            <h1 className="font-display text-4xl md:text-6xl font-medium tracking-tight leading-[0.95]">
+              Ernesto Corzo
+            </h1>
+          </div>
+          
           <a
             href={LINKS.github}
             target="_blank"
             rel="noreferrer"
-            className="group inline-flex items-center gap-1.5 font-mono text-sm text-[var(--ink-soft)] hover:text-[var(--jade)] transition-colors"
+            className="group inline-flex items-center gap-1.5 font-mono text-sm text-[var(--ink-soft)] hover:text-[var(--jade)] transition-colors mb-2 sm:mb-1"
           >
             github.com/ErnestoCorzo
             <ArrowUpRight size={15} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
